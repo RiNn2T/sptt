@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Lời khuyên an toàn | Bảo vệ trẻ em 6-10 tuổi</title>
+  <!-- Google Fonts & Font Awesome -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { font-family:'Inter',sans-serif; background-color:#fefcf5; color:#1e2a2e; scroll-behavior:smooth; line-height:1.5; }
+    .container { max-width:1280px; margin:0 auto; padding:0 24px; }
+    .navbar { background:white; box-shadow:0 4px 20px rgba(0,0,0,0.03); position:sticky; top:0; z-index:100; backdrop-filter:blur(2px); background:rgba(255,255,255,0.96); }
+    .nav-wrapper { display:flex; justify-content:space-between; align-items:center; padding:16px 0; flex-wrap:wrap; }
+    .logo h1 { font-size:1.6rem; font-weight:800; background:linear-gradient(135deg,#D94A2B,#E67E22); background-clip:text; -webkit-background-clip:text; color:transparent; letter-spacing:-0.3px; }
+    .logo p { font-size:0.75rem; font-weight:500; color:#E67E22; letter-spacing:0.5px; }
+    .nav-links { display:flex; gap:32px; list-style:none; }
+    .nav-links a { text-decoration:none; font-weight:600; color:#2c3e2f; transition:0.2s; }
+    .nav-links a:hover { color:#D94A2B; }
+    .btn-outline { border:1.5px solid #D94A2B; padding:6px 16px; border-radius:40px; transition:0.2s; }
+    .btn-outline:hover { background:#D94A2B; color:white !important; }
+
+    .hero-advice { background:linear-gradient(115deg,#fff0e0,#ffe0c0); padding:50px 0 60px; border-radius:0 0 40px 40px; }
+    .hero-flex { display:flex; align-items:center; gap:40px; flex-wrap:wrap; }
+    .hero-text { flex:1; }
+    .hero-text h1 { font-size:2.8rem; font-weight:800; line-height:1.2; color:#2d3e2b; }
+    .hero-text h1 span { color:#D94A2B; }
+    .hero-text p { font-size:1.2rem; margin:20px 0; color:#3e5a3a; }
+    .hero-illustration { flex:0.8; text-align:center; }
+
+    .card-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:32px; margin-top:20px; }
+    .card { background:white; border-radius:32px; padding:28px 24px; box-shadow:0 12px 28px rgba(0,0,0,0.04); transition:transform 0.25s ease,box-shadow 0.3s; border:1px solid #ffe1cf; text-align:center; }
+    .card:hover { transform:translateY(-6px); box-shadow:0 24px 40px rgba(217,74,43,0.12); }
+    .card-svg { margin-bottom:16px; display:inline-block; width:80px; height:80px; }
+    .card h3 { font-size:1.5rem; margin:12px 0 10px; font-weight:700; }
+    .section-title { text-align:center; font-size:2.2rem; font-weight:800; margin-bottom:16px; color:#2c4b2f; }
+    .section-sub { text-align:center; max-width:700px; margin:0 auto 50px auto; color:#5c6e5a; font-size:1.1rem; }
+    .hotline-mini { background:#2e3f2c; border-radius:32px; padding:24px; text-align:center; color:white; margin:40px 0 20px; }
+    .hotline-number { font-size:2rem; font-weight:800; background:#ffedd5; display:inline-block; padding:8px 28px; border-radius:60px; color:#b34127; margin:12px 0; }
+    .btn-primary { background:#D94A2B; border:none; color:white; font-weight:700; padding:12px 28px; border-radius:60px; font-size:1rem; cursor:pointer; transition:0.2s; }
+    .footer { background:#1e2a24; color:#ddd8cf; padding:40px 0 30px; text-align:center; margin-top:50px; }
+    .footer a { color:#ffb48a; text-decoration:none; }
+    .social-icons i { font-size:1.5rem; margin:0 10px; transition:0.2s; }
+    .alert-toast { position:fixed; bottom:30px; left:50%; transform:translateX(-50%); background:#2c4b2f; color:white; padding:12px 28px; border-radius:60px; font-weight:600; z-index:200; box-shadow:0 8px 20px rgba(0,0,0,0.2); animation:fadeUp 0.3s ease; }
+    @keyframes fadeUp { from { opacity:0; transform:translateX(-50%) translateY(20px); } to { opacity:1; transform:translateX(-50%) translateY(0); } }
+    @media (max-width:860px) { .hero-text h1 { font-size:2rem; } .section-title { font-size:1.8rem; } }
+  </style>
+</head>
+<body>
+
+<!-- NAVIGATION -->
+<div class="navbar">
+  <div class="container nav-wrapper">
+    <div class="logo"><h1>🌱 AN TOÀN CHO BÉ</h1><p>Chung tay chống bắt cóc & xâm hại trẻ em</p></div>
+    <ul class="nav-links">
+      <li><a href="index.html">🏠 Trang chủ</a></li>
+      <li><a href="phongtranh.html">Phòng tránh</a></li>
+      <li><a href="dau-hieu.html">Dấu hiệu</a></li>
+      <li><a href="loi-khuyen.html" style="color:#D94A2B; font-weight:800;">💡 Lời khuyên</a></li>
+      <li><a href="index.html#report" class="btn-outline">Báo tin khẩn</a></li>
+    </ul>
+  </div>
+</div>
+
+<!-- HERO -->
+<section class="hero-advice">
+  <div class="container hero-flex">
+    <div class="hero-text">
+      <div class="hero-badge" style="background:#ffede3; display:inline-block; padding:6px 16px; border-radius:40px; font-weight:600; color:#D94A2B;"><i class="fas fa-star-of-life"></i> Bí kíp vàng cho cả nhà</div>
+      <h1>Lời khuyên <span>giúp bé luôn an toàn</span> cùng cha mẹ</h1>
+      <p>Những điều đơn giản nhưng cực kỳ quan trọng để bảo vệ con yêu khỏi nguy cơ bắt cóc và xâm hại. Cả nhà cùng đọc và thực hành nhé!</p>
+    </div>
+    <div class="hero-illustration">
+      <svg width="200" height="200" viewBox="0 0 200 200">
+        <circle cx="100" cy="100" r="70" fill="#FFD9B5" />
+        <circle cx="75" cy="85" r="8" fill="#2D3E2B" />
+        <circle cx="125" cy="85" r="8" fill="#2D3E2B" />
+        <path d="M85 115 Q100 130 115 115" stroke="#D94A2B" stroke-width="5" fill="none" stroke-linecap="round" />
+        <rect x="90" y="30" width="20" height="25" fill="#E67E22" rx="5" />
+        <text x="100" y="170" text-anchor="middle" font-size="28" fill="#D94A2B">❤️</text>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<div class="container">
+  <!-- 8+ ĐIỀU CON CẦN GHI NHỚ: 8 CARD -->
+  <div class="section-title">🧸 8+ điều con cần ghi nhớ</div>
+  <div class="section-sub">Những quy tắc đơn giản, dễ nhớ giúp con tự bảo vệ mình mỗi ngày.</div>
+  <div class="card-grid">
+    <!-- Card 1 -->
+    <div class="card">
+      <div class="card-svg"><svg width="70" height="70" viewBox="0 0 100 100"><circle cx="50" cy="45" r="25" fill="#FFD966"/><text x="50" y="55" font-size="28" text-anchor="middle" fill="#D94A2B">🔊</text></svg></div>
+      <h3>Hét to & chạy nhanh</h3>
+      <p>Nếu ai đó cố kéo con đi, hãy hét thật to “CỨU TÔI! ĐÂY KHÔNG PHẢI BỐ MẸ TÔI!” và chạy về phía đông người.</p>
+    </div>
+    <!-- Card 2 -->
+    <div class="card">
+      <div class="card-svg"><svg width="70" height="70" viewBox="0 0 100 100"><rect x="30" y="30" width="40" height="40" rx="10" fill="#2A9D8F"/><text x="50" y="58" font-size="30" text-anchor="middle" fill="white">🔐</text></svg></div>
+      <h3>Mật khẩu gia đình</h3>
+      <p>Cùng bố mẹ đặt một mật khẩu bí mật. Nếu ai bảo đến đón con nhưng không biết mật khẩu, con tuyệt đối không đi theo.</p>
+    </div>
+    <!-- Card 3 -->
+    <div class="card">
+      <div class="card-svg"><svg width="70" height="70" viewBox="0 0 100 100"><circle cx="50" cy="50" r="28" fill="#E9C46A"/><text x="50" y="60" font-size="30" text-anchor="middle" fill="#264653">👥</text></svg></div>
+      <h3>Đi theo nhóm</h3>
+      <p>Luôn đi cùng bạn bè hoặc người lớn, không đi một mình qua chỗ vắng vẻ, hẻm tối.</p>
+    </div>
+    <!-- Card 4 -->
+    <div class="card">
+      <div class="card-svg"><svg width="70" height="70" viewBox="0 0 100 100"><path d="M30 30 L70 30 L80 50 L70 70 L30 70 L20 50 Z" fill="#F4A261"/><text x="50" y="55" font-size="28" text-anchor="middle" fill="white">📞</text></svg></div>
+      <h3>Thuộc số điện thoại</h3>
+      <p>Con cần nhớ số bố mẹ, tên trường, địa chỉ nhà để gọi giúp đỡ khi cần.</p>
+    </div>
+    <!-- Card 5 -->
+    <div class="card">
+      <div class="card-svg"><svg width="70" height="70" viewBox="0 0 100 100"><circle cx="50" cy="50" r="30" fill="#E76F51"/><text x="50" y="62" font-size="32" text-anchor="middle" fill="white">✋</text></svg></div>
+      <h3>Nói KHÔNG khi không thoải mái</h3>
+      <p>Con có quyền nói KHÔNG với bất kỳ ai khiến con cảm thấy sợ hãi hay khó chịu – kể cả người quen.</p>
+    </div>
+    <!-- Card 6 -->
+    <div class="card">
+      <div class="card-svg"><svg width="70" height="70" viewBox="0 0 100 100"><rect x="25" y="35" width="50" height="35" rx="10" fill="#2C4B2F"/><text x="50" y="60" font-size="28" text-anchor="middle" fill="white">👀</text></svg></div>
+      <h3>Tin vào trực giác</h3>
+      <p>Nếu con cảm thấy “có gì đó không ổn”, hãy lập tức chạy đến chỗ bố mẹ hoặc thầy cô con tin tưởng.</p>
+    </div>
+    <!-- Card 7 (mới) -->
+    <div class="card">
+      <div class="card-svg"><svg width="70" height="70" viewBox="0 0 100 100"><path d="M50 20 L35 45 L20 40 L30 60 L10 75 L30 80 L50 95 L70 80 L90 75 L70 60 L80 40 L65 45 Z" fill="#FFB347"/><text x="50" y="55" font-size="22" text-anchor="middle" fill="#D94A2B">🚫</text></svg></div>
+      <h3>Không nhận quà người lạ</h3>
+      <p>Dù quà có hấp dẫn đến đâu, con cũng tuyệt đối không nhận bất cứ thứ gì từ người lạ.</p>
+    </div>
+    <!-- Card 8 (mới) -->
+    <div class="card">
+      <div class="card-svg"><svg width="70" height="70" viewBox="0 0 100 100"><circle cx="50" cy="50" r="30" fill="#2A9D8F"/><text x="50" y="63" font-size="32" text-anchor="middle" fill="white">🏃</text></svg></div>
+      <h3>Chạy đến nơi an toàn</h3>
+      <p>Biết những địa điểm an toàn như đồn công an, trường học, nhà hàng xóm thân thiết để chạy đến khi cần.</p>
+    </div>
+  </div>
+
+  <!-- 4 ĐIỀU CHA MẸ NÊN LÀM: 4 CARD -->
+  <div class="section-title" style="margin-top: 60px;">👨‍👩‍👧‍👦 4 điều cha mẹ nên làm ngay hôm nay</div>
+  <div class="section-sub">Những hành động thiết thực giúp xây dựng lá chắn an toàn cho con.</div>
+  <div class="card-grid">
+    <div class="card">
+      <div class="card-svg"><svg width="70" height="70" viewBox="0 0 100 100"><circle cx="50" cy="50" r="30" fill="#E67E22"/><text x="50" y="63" font-size="36" text-anchor="middle" fill="white">💬</text></svg></div>
+      <h3>Trò chuyện mỗi ngày</h3>
+      <p>Dành ít nhất 15 phút hỏi con về những điều con vui, con lo. Xây dựng niềm tin để con không ngại kể bất kỳ bí mật nào.</p>
+    </div>
+    <div class="card">
+      <div class="card-svg"><svg width="70" height="70" viewBox="0 0 100 100"><path d="M30 45 L50 25 L70 45 L50 65 Z" fill="#D94A2B"/><text x="50" y="53" font-size="28" text-anchor="middle" fill="white">🔑</text></svg></div>
+      <h3>Đặt mật khẩu gia đình</h3>
+      <p>Chọn một từ bí mật chỉ người thân biết. Kiểm tra mật khẩu trước khi cho con đi cùng ai đó lạ.</p>
+    </div>
+    <div class="card">
+      <div class="card-svg"><svg width="70" height="70" viewBox="0 0 100 100"><rect x="25" y="35" width="50" height="40" rx="10" fill="#2A9D8F"/><text x="50" y="60" font-size="28" text-anchor="middle" fill="white">📱</text></svg></div>
+      <h3>Dùng công nghệ hỗ trợ</h3>
+      <p>Cài đặt ứng dụng định vị, đồng hồ thông minh, kiểm tra bạn bè và tin nhắn của con trên mạng xã hội.</p>
+    </div>
+    <div class="card">
+      <div class="card-svg"><svg width="70" height="70" viewBox="0 0 100 100"><circle cx="50" cy="50" r="32" fill="#E9C46A"/><text x="50" y="63" font-size="32" text-anchor="middle" fill="#D94A2B">📞</text></svg></div>
+      <h3>Lưu số 111 và dạy con gọi</h3>
+      <p>Dán số điện thoại 111 (tổng đài bảo vệ trẻ em) ở góc học tập, tập cho con cách gọi khi cần giúp đỡ.</p>
+    </div>
+  </div>
+
+  <!-- HOTLINE NHẮC NHỞ -->
+  <div class="hotline-mini">
+    <i class="fas fa-phone-alt" style="font-size: 2rem;"></i>
+    <h2>Đường dây nóng bảo vệ trẻ em</h2>
+    <div class="hotline-number">111</div>
+    <p>Gọi ngay nếu phát hiện hành vi bắt cóc, xâm hại. <br> Hoặc 113 (Công an) - 1800 1567 (Tổng đài quốc gia)</p>
+    <p style="font-size:0.9rem; margin-top:10px;">☎️ Luôn trực tuyến 24/7, miễn phí, bảo mật</p>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="social-icons">
+      <a href="#"><i class="fab fa-facebook-f"></i></a>
+      <a href="#"><i class="fab fa-youtube"></i></a>
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <i class="fab fa-zalo"></i>
+    </div>
+    <p style="margin:20px 0 10px;">© 2025 - Chiến dịch "Chung tay bảo vệ trẻ em" | Phòng chống bắt cóc & xâm hại trẻ em</p>
+    <p>Mọi hành vi xâm hại trẻ em cần được tố giác kịp thời. Hãy là người hùng thầm lặng.</p>
+    <p><a href="#">Chính sách bảo mật</a> | <a href="#">Liên hệ hợp tác</a></p>
+  </div>
+</footer>
+
+<script>
+  // Smooth scroll cho neo
+  document.querySelectorAll('.nav-links a[href^="#"], .btn-outline[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+      const targetId = this.getAttribute('href');
+      if (targetId === "#" || targetId.includes("index.html")) return;
+      if (targetId && targetId !== "#" && targetId.startsWith("#")) {
+        const targetElem = document.querySelector(targetId);
+        if(targetElem) { e.preventDefault(); targetElem.scrollIntoView({ behavior:'smooth', block:'start' }); }
+      }
+    });
+  });
+
+  function showToast(message, bgColor = "#2c4b2f") {
+    const existingToast = document.querySelector('.alert-toast');
+    if(existingToast) existingToast.remove();
+    const toast = document.createElement('div');
+    toast.className = 'alert-toast';
+    toast.textContent = message;
+    toast.style.backgroundColor = bgColor;
+    toast.style.maxWidth = "90%";
+    toast.style.textAlign = "center";
+    document.body.appendChild(toast);
+    setTimeout(() => { toast.style.opacity = "0"; setTimeout(() => toast.remove(), 400); }, 3800);
+  }
+
+  // MOBILE MENU (giống hệt index)
+  (function initMobileMenu() {
+    function isMobile() { return window.innerWidth <= 768; }
+    if (!isMobile()) return;
+    if (document.querySelector('.hamburger-menu')) return;
+    const navWrapper = document.querySelector('.nav-wrapper');
+    const navLinks = document.querySelector('.nav-links');
+    if (!navWrapper || !navLinks) return;
+    const hamburger = document.createElement('button');
+    hamburger.className = 'hamburger-menu';
+    hamburger.innerHTML = '<i class="fas fa-bars"></i>';
+    hamburger.setAttribute('aria-label', 'Menu');
+    hamburger.style.cssText = `background:none; border:none; font-size:1.8rem; color:#D94A2B; cursor:pointer; display:none; padding:8px; margin-left:auto; touch-action:manipulation;`;
+    navWrapper.insertBefore(hamburger, navLinks);
+    const style = document.createElement('style');
+    style.textContent = `
+      @media (max-width: 768px) {
+        .hamburger-menu { display: block !important; }
+        .nav-links { position: fixed; top:0; right:-100%; width:75%; max-width:280px; height:100vh; background:white; flex-direction:column; align-items:flex-start; padding:80px 24px 24px; gap:24px; transition:right 0.3s ease; box-shadow:-4px 0 20px rgba(0,0,0,0.1); z-index:1000; display:flex !important; }
+        .nav-links.show { right:0; }
+        body.menu-open { overflow:hidden; }
+        .menu-overlay { position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.4); z-index:999; opacity:0; visibility:hidden; transition:0.2s; }
+        .menu-overlay.active { opacity:1; visibility:visible; }
+      }
+    `;
+    document.head.appendChild(style);
+    const overlay = document.createElement('div');
+    overlay.className = 'menu-overlay';
+    document.body.appendChild(overlay);
+    function openMenu() { navLinks.classList.add('show'); overlay.classList.add('active'); document.body.classList.add('menu-open'); }
+    function closeMenu() { navLinks.classList.remove('show'); overlay.classList.remove('active'); document.body.classList.remove('menu-open'); }
+    hamburger.addEventListener('click', (e) => { e.stopPropagation(); navLinks.classList.contains('show') ? closeMenu() : openMenu(); });
+    document.querySelectorAll('.nav-links a').forEach(link => link.addEventListener('click', closeMenu));
+    overlay.addEventListener('click', closeMenu);
+    window.addEventListener('resize', () => { if(window.innerWidth > 768 && navLinks.classList.contains('show')) closeMenu(); });
+  })();
+
+  // Thêm liên kết tel trên mobile
+  if(window.innerWidth <= 768) {
+    const hotlineDiv = document.querySelector('.hotline-mini');
+    if(hotlineDiv) {
+      hotlineDiv.innerHTML = hotlineDiv.innerHTML.replace(/(\b111\b)/g, '<a href="tel:111" style="color:#ffb48a; text-decoration:underline;">111</a>');
+      hotlineDiv.innerHTML = hotlineDiv.innerHTML.replace(/(\b113\b)/g, '<a href="tel:113" style="color:#ffb48a; text-decoration:underline;">113</a>');
+      hotlineDiv.innerHTML = hotlineDiv.innerHTML.replace(/(1800\s*1567)/g, '<a href="tel:18001567" style="color:#ffb48a; text-decoration:underline;">1800 1567</a>');
+    }
+  }
+
+  // Chào mừng thân thiện
+  window.addEventListener('load', () => {
+    setTimeout(() => {
+      showToast("💡 8+ điều con cần nhớ! Cả nhà cùng đọc để bảo vệ bé yêu nhé!", "#D94A2B");
+    }, 800);
+  });
+</script>
+</body>
+</html>

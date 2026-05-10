@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Dấu hiệu nhận biết nguy cơ | Bảo vệ trẻ em</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { font-family:'Inter',sans-serif; background-color:#fefcf5; color:#1e2a2e; scroll-behavior:smooth; line-height:1.5; }
+    .container { max-width:1280px; margin:0 auto; padding:0 24px; }
+    .navbar { background:white; box-shadow:0 4px 20px rgba(0,0,0,0.03); position:sticky; top:0; z-index:100; backdrop-filter:blur(2px); background:rgba(255,255,255,0.96); }
+    .nav-wrapper { display:flex; justify-content:space-between; align-items:center; padding:16px 0; flex-wrap:wrap; }
+    .logo h1 { font-size:1.6rem; font-weight:800; background:linear-gradient(135deg,#D94A2B,#E67E22); background-clip:text; -webkit-background-clip:text; color:transparent; }
+    .logo p { font-size:0.75rem; font-weight:500; color:#E67E22; }
+    .nav-links { display:flex; gap:32px; list-style:none; }
+    .nav-links a { text-decoration:none; font-weight:600; color:#2c3e2f; transition:0.2s; }
+    .nav-links a:hover { color:#D94A2B; }
+    .btn-outline { border:1.5px solid #D94A2B; padding:6px 16px; border-radius:40px; }
+    .btn-outline:hover { background:#D94A2B; color:white !important; }
+    .hero-signs { background:linear-gradient(120deg,#ffe6e0,#ffd9cc); padding:50px 0 60px; border-radius:0 0 40px 40px; }
+    .hero-flex { display:flex; align-items:center; gap:40px; flex-wrap:wrap; }
+    .hero-text { flex:1; }
+    .hero-text h1 { font-size:2.8rem; font-weight:800; line-height:1.2; color:#2d3e2b; }
+    .hero-text h1 span { color:#D94A2B; }
+    .hero-text p { font-size:1.2rem; margin:20px 0; color:#3e5a3a; }
+    .hero-illustration { flex:0.8; text-align:center; }
+    .card-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:32px; }
+    .card { background:white; border-radius:32px; padding:28px 24px; box-shadow:0 12px 28px rgba(0,0,0,0.04); transition:0.25s; border:1px solid #ffe1cf; text-align:center; }
+    .card:hover { transform:translateY(-6px); box-shadow:0 24px 40px rgba(217,74,43,0.12); }
+    .card-svg { margin-bottom:16px; display:inline-block; width:80px; height:80px; }
+    .card h3 { font-size:1.5rem; margin:12px 0 10px; font-weight:700; }
+    .section-title { text-align:center; font-size:2.2rem; font-weight:800; margin-bottom:16px; color:#2c4b2f; }
+    .section-sub { text-align:center; max-width:700px; margin:0 auto 50px auto; color:#5c6e5a; font-size:1.1rem; }
+    .two-columns { display:flex; gap:40px; flex-wrap:wrap; margin-top:30px; }
+    .col { flex:1; background:white; border-radius:28px; padding:28px; box-shadow:0 8px 20px rgba(0,0,0,0.02); border:1px solid #ffddd0; }
+    .warning-list { padding-left:20px; text-align:left; }
+    .warning-list li { margin-bottom:12px; font-size:1rem; }
+    .interactive-box { background:#fff7e8; border-radius:32px; padding:28px; margin-top:30px; }
+    .sign-card { background:white; border-radius:28px; padding:20px; margin-bottom:20px; display:flex; align-items:center; gap:20px; flex-wrap:wrap; cursor:pointer; transition:0.2s; border:2px solid transparent; }
+    .sign-card:hover { transform:scale(1.01); box-shadow:0 8px 20px rgba(0,0,0,0.05); }
+    .sign-icon { font-size:2.5rem; width:60px; text-align:center; }
+    .sign-text { flex:1; font-weight:500; }
+    .sign-badge { font-size:1rem; font-weight:600; }
+    .correct-sign { background:#e0f2e9; border-color:#2c4b2f; }
+    .wrong-sign { background:#ffe0db; border-color:#D94A2B; text-decoration:line-through; }
+    .btn-primary { background:#D94A2B; border:none; color:white; font-weight:700; padding:12px 28px; border-radius:60px; font-size:1rem; cursor:pointer; transition:0.2s; }
+    .hotline-mini { background:#2e3f2c; border-radius:32px; padding:24px; text-align:center; color:white; margin:40px 0 20px; }
+    .hotline-number { font-size:2rem; font-weight:800; background:#ffedd5; display:inline-block; padding:8px 28px; border-radius:60px; color:#b34127; margin:12px 0; }
+    .footer { background:#1e2a24; color:#ddd8cf; padding:40px 0 30px; text-align:center; margin-top:50px; }
+    .footer a { color:#ffb48a; text-decoration:none; }
+    .social-icons i { font-size:1.5rem; margin:0 10px; transition:0.2s; }
+    .alert-toast { position:fixed; bottom:30px; left:50%; transform:translateX(-50%); background:#2c4b2f; color:white; padding:12px 28px; border-radius:60px; font-weight:600; z-index:200; animation:fadeUp 0.3s ease; }
+    @keyframes fadeUp { from { opacity:0; transform:translateX(-50%) translateY(20px); } to { opacity:1; transform:translateX(-50%) translateY(0); } }
+    @media (max-width:860px) { .hero-text h1 { font-size:2rem; } .section-title { font-size:1.8rem; } .sign-card { flex-direction:column; text-align:center; } }
+  </style>
+</head>
+<body>
+<div class="navbar">
+  <div class="container nav-wrapper">
+    <div class="logo"><h1>🌱 AN TOÀN CHO BÉ</h1><p>Chung tay chống bắt cóc & xâm hại trẻ em</p></div>
+    <ul class="nav-links">
+      <li><a href="index.html">🏠 Trang chủ</a></li>
+      <li><a href="phongtranh.html">Phòng tránh</a></li>
+      <li><a href="dau-hieu.html" style="color:#D94A2B; font-weight:800;">⚠️ Dấu hiệu</a></li>
+      <li><a href="index.html#advice">Lời khuyên</a></li>
+      <li><a href="index.html#report" class="btn-outline">Báo tin khẩn</a></li>
+    </ul>
+  </div>
+</div>
+
+<section class="hero-signs">
+  <div class="container hero-flex">
+    <div class="hero-text">
+      <div class="hero-badge" style="background:#ffede3; display:inline-block; padding:6px 16px; border-radius:40px; font-weight:600; color:#D94A2B;"><i class="fas fa-search"></i> Nhận biết sớm – Bảo vệ kịp thời</div>
+      <h1>Dấu hiệu nhận biết <span>nguy cơ bắt cóc & xâm hại</span></h1>
+      <p>Cha mẹ, thầy cô và các bạn nhỏ cùng học cách nhận ra những tín hiệu cảnh báo. Đôi khi chỉ một thay đổi nhỏ cũng có thể cứu một mạng người!</p>
+    </div>
+    <div class="hero-illustration">
+      <svg width="200" height="200" viewBox="0 0 200 200"><circle cx="100" cy="100" r="70" fill="#FFCDB2"/><circle cx="75" cy="85" r="8" fill="#2D3E2B"/><circle cx="125" cy="85" r="8" fill="#2D3E2B"/><path d="M80 120 Q100 140 120 120" stroke="#D94A2B" stroke-width="5" fill="none"/><rect x="90" y="25" width="20" height="30" fill="#E67E22" rx="5"/><text x="100" y="170" text-anchor="middle" font-size="22" fill="#D94A2B" font-weight="bold">⚠️</text></svg>
+    </div>
+  </div>
+</section>
+
+<div class="container">
+  <div class="section-title">🚨 Những dấu hiệu cần cảnh giác</div>
+  <div class="section-sub">Cả cha mẹ và các con đều nên biết để phòng tránh kịp thời.</div>
+  <div class="two-columns">
+    <div class="col">
+      <h3><i class="fas fa-frown-open"></i> Thay đổi hành vi & tâm lý của trẻ</h3>
+      <ul class="warning-list">
+        <li>🔸 Trẻ đột nhiên sợ hãi, lo lắng, trầm cảm hoặc hung hăng bất thường.</li>
+        <li>🔸 Bỏ học, trốn nhà, hay có bạn bè xấu hoặc người lớn lạ mặt quan tâm đặc biệt.</li>
+        <li>🔸 Có vết bầm tím, trầy xước không rõ nguyên nhân, thay đổi giờ giấc sinh hoạt.</li>
+        <li>🔸 Trẻ không muốn đi học, sợ một người nào đó hoặc sợ một địa điểm.</li>
+        <li>🔸 Thường xuyên có quà, tiền, điện thoại đắt tiền nhưng không giải thích được.</li>
+        <li>🔸 Trẻ hay giật mình, khóc đêm, không muốn ngủ một mình.</li>
+        <li>🔸 Đột nhiên vẽ những hình ảnh bạo lực hoặc nhạy cảm không phù hợp lứa tuổi.</li>
+      </ul>
+    </div>
+    <div class="col">
+      <h3><i class="fas fa-eye"></i> Dấu hiệu từ môi trường xung quanh</h3>
+      <ul class="warning-list">
+        <li>🔹 Trẻ thường xuyên đi cùng người không phải cha mẹ nhưng tỏ ra sợ hãi hoặc bị kiểm soát.</li>
+        <li>🔹 Xuất hiện vật dụng lạ, tiền bạc, điện thoại đắt tiền không phù hợp lứa tuổi.</li>
+        <li>🔹 Trẻ biến mất trong khoảng thời gian dài mà không có lời giải thích hợp lý.</li>
+        <li>🔹 Có người lạ thường xuyên đón trẻ hoặc lui tới nhà khi bố mẹ vắng.</li>
+        <li>🔹 Trẻ có kiến thức về tình dục không phù hợp với lứa tuổi.</li>
+        <li>🔹 Người lạ thường xuyên xuất hiện gần trường học hoặc nơi trẻ vui chơi.</li>
+        <li>🔹 Trẻ bị theo dõi hoặc nhận được tin nhắn, thư từ đe dọa.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="section-title" style="margin-top:40px;">🧸 Bé hãy nhìn và ghi nhớ những dấu hiệu nguy hiểm</div>
+  <div class="card-grid">
+    <!-- Thay thế phần card-grid cũ bằng 4 card mới dưới đây -->
+<div class="card-grid">
+  <div class="card">
+    <div class="card-svg">
+      <svg width="70" height="70" viewBox="0 0 100 100">
+        <circle cx="50" cy="50" r="35" fill="#FFD966" />
+        <path d="M35 55 L65 55" stroke="#D94A2B" stroke-width="5" />
+        <circle cx="38" cy="40" r="4" fill="#4B2E1E" />
+        <circle cx="62" cy="40" r="4" fill="#4B2E1E" />
+        <text x="50" y="70" font-size="20" text-anchor="middle" fill="#D94A2B">!</text>
+      </svg>
+    </div>
+    <h3>⚡ Bụng dạ “máy báo động”</h3>
+    <p>Nếu con bỗng thấy hồi hộp, lo sợ, khó chịu trong người khi ở gần một ai đó – đó là dấu hiệu con cần lập tức tìm người lớn tin cậy.</p>
+  </div>
+  <div class="card">
+    <div class="card-svg">
+      <svg width="70" height="70" viewBox="0 0 100 100">
+        <circle cx="50" cy="45" r="25" fill="#F4A261" />
+        <path d="M35 55 L65 55" stroke="#D94A2B" stroke-width="4" />
+        <circle cx="40" cy="40" r="3" fill="white" />
+        <circle cx="60" cy="40" r="3" fill="white" />
+        <rect x="45" y="62" width="10" height="15" fill="#D94A2B" rx="3" />
+      </svg>
+    </div>
+    <h3>🙈 Người lạ muốn con giữ bí mật</h3>
+    <p>“Đừng kể với bố mẹ” – câu nói đó rất nguy hiểm. Bí mật về những cái chạm hoặc quà tặng riêng tư là dấu hiệu con cần nói ngay với người lớn.</p>
+  </div>
+  <div class="card">
+    <div class="card-svg">
+      <svg width="70" height="70" viewBox="0 0 100 100">
+        <rect x="25" y="35" width="50" height="35" rx="8" fill="#2A9D8F" />
+        <circle cx="50" cy="45" r="10" fill="#E9C46A" />
+        <path d="M50 35 L50 25" stroke="#264653" stroke-width="4" />
+        <text x="50" y="85" font-size="20" text-anchor="middle" fill="#D94A2B">🚫</text>
+      </svg>
+    </div>
+    <h3>✋ Người lạ cố ép con lên xe</h3>
+    <p>Nếu ai đó muốn kéo con lên xe hoặc đi vào nơi vắng vẻ, con hãy hét thật to, chạy thật nhanh và tìm sự giúp đỡ ngay lập tức.</p>
+  </div>
+  <div class="card">
+    <div class="card-svg">
+      <svg width="70" height="70" viewBox="0 0 100 100">
+        <circle cx="50" cy="50" r="30" fill="#E76F51" />
+        <path d="M35 50 L65 50" stroke="white" stroke-width="6" />
+        <circle cx="50" cy="30" r="8" fill="#2D3E2B" />
+        <text x="50" y="75" font-size="18" text-anchor="middle" fill="white">👀</text>
+      </svg>
+    </div>
+    <h3>👁️ Bị theo dõi hoặc nhìn chằm chằm</h3>
+    <p>Có người lạ luôn đi theo con, hoặc nhìn con chằm chằm khiến con không thoải mái. Đó là lúc con cần đến gần đám đông hoặc nhờ cô chú bảo vệ giúp đỡ.</p>
+  </div>
+</div>
+  </div>
+
+  <!-- PHẦN TƯƠNG TÁC: DẤU HIỆU THEO CẢM NHẬN CỦA BÉ -->
+  <div class="interactive-box">
+    <h3 style="text-align:center; margin-bottom:20px;"><i class="fas fa-lightbulb"></i> Hoạt động: Những dấu hiệu bé cảm thấy có thể là người xấu</h3>
+    <p style="text-align:center; margin-bottom:24px;">👉 Hãy click vào những tình huống <strong>khiến bé nghi ngờ người xấu</strong> (dấu hiệu nguy hiểm) 👈</p>
+    <div id="signsGame">
+      <!-- Các tình huống được viết lại từ góc nhìn trẻ em -->
+      <div class="sign-card" data-danger="true">
+        <div class="sign-icon"><i class="fas fa-candy-cane"></i></div>
+        <div class="sign-text">Một người lạ tặng kẹo, bánh nhưng yêu cầu “Đừng nói với bố mẹ”</div>
+        <div class="sign-badge">⚠️ NGUY HIỂM</div>
+      </div>
+      <div class="sign-card" data-danger="true">
+        <div class="sign-icon"><i class="fas fa-car-side"></i></div>
+        <div class="sign-text">Có người lạ dừng xe bảo: “Bố mẹ con bị tai nạn, lên xe chú đưa đi gấp!”</div>
+        <div class="sign-badge">⚠️ NGUY HIỂM</div>
+      </div>
+      <div class="sign-card" data-danger="false">
+        <div class="sign-icon"><i class="fas fa-home"></i></div>
+        <div class="sign-text">Bố mẹ đưa đón đi học đúng giờ, luôn hỏi han con mỗi ngày</div>
+        <div class="sign-badge">⚠️ NGUY HIỂM</div>
+      </div>
+      <div class="sign-card" data-danger="true">
+        <div class="sign-icon"><i class="fas fa-hand-peace"></i></div>
+        <div class="sign-text">Người lạ muốn nắm tay hoặc chạm vào vùng riêng tư của con</div>
+        <div class="sign-badge">⚠️ NGUY HIỂM</div>
+      </div>
+      <div class="sign-card" data-danger="true">
+        <div class="sign-icon"><i class="fas fa-comment-dots"></i></div>
+        <div class="sign-text">Một người lớn nhờ con “giữ bí mật” về những điều không thoải mái</div>
+        <div class="sign-badge">⚠️ NGUY HIỂM</div>
+      </div>
+      <div class="sign-card" data-danger="false">
+        <div class="sign-icon"><i class="fas fa-chalkboard"></i></div>
+        <div class="sign-text">Cô giáo dạy con nói KHÔNG khi bị ai đó làm phiền</div>
+        <div class="sign-badge">⚠️ NGUY HIỂM</div>
+      </div>
+      <div class="sign-card" data-danger="true">
+        <div class="sign-icon"><i class="fas fa-mobile-alt"></i></div>
+        <div class="sign-text">Người lạ trên mạng rủ con gặp mặt riêng, hứa tặng quà</div>
+        <div class="sign-badge">⚠️ NGUY HIỂM</div>
+      </div>
+      <div class="sign-card" data-danger="true">
+        <div class="sign-icon"><i class="fas fa-hand-holding-usd"></i></div>
+        <div class="sign-text">Có người lạ đưa tiền hoặc đồ chơi đắt tiền và bảo con đi theo</div>
+        <div class="sign-badge">⚠️ NGUY HIỂM</div>
+      </div>
+      <div class="sign-card" data-danger="false">
+        <div class="sign-icon"><i class="fas fa-people-arrows"></i></div>
+        <div class="sign-text">Gia đình thường xuyên chơi cùng con, con luôn được lắng nghe</div>
+        <div class="sign-badge">⚠️ NGUY HIỂM</div>
+      </div>
+      <div class="sign-card" data-danger="true">
+        <div class="sign-icon"><i class="fas fa-street-view"></i></div>
+        <div class="sign-text">Một người lạ luôn đứng gần cổng trường và cố gắng bắt chuyện với con</div>
+        <div class="sign-badge">⚠️ NGUY HIỂM</div>
+      </div>
+    </div>
+    <div style="text-align:center; margin-top:24px;">
+      <button id="resetSignGame" class="btn-primary" style="background:#E67E22;">Làm lại</button>
+    </div>
+    <p id="gameFeedback" style="text-align:center; margin-top:16px; font-weight:600;"></p>
+  </div>
+
+  <div class="hotline-mini">
+    <i class="fas fa-bell" style="font-size:2rem;"></i>
+    <h3>🚨 Nếu bạn nghi ngờ trẻ đang gặp nguy hiểm</h3>
+    <p>Hãy báo ngay cho công an hoặc gọi <strong>Tổng đài bảo vệ trẻ em 111</strong>. Đừng im lặng vì một hành động nhỏ có thể cứu một cuộc đời.</p>
+    <div class="hotline-number">111</div>
+    <p>Hoặc 113 (Công an) - 1800 1567</p>
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="container">
+    <div class="social-icons"><a href="#"><i class="fab fa-facebook-f"></i></a><a href="#"><i class="fab fa-youtube"></i></a><a href="#"><i class="fab fa-instagram"></i></a><i class="fab fa-zalo"></i></div>
+    <p style="margin:20px 0 10px;">© 2025 - Chiến dịch "Chung tay bảo vệ trẻ em" | Phòng chống bắt cóc & xâm hại trẻ em</p>
+    <p>Hãy là người hùng thầm lặng – tố giác ngay nếu thấy dấu hiệu bất thường.</p>
+    <p><a href="#">Chính sách bảo mật</a> | <a href="#">Liên hệ hợp tác</a></p>
+  </div>
+</footer>
+
+<script>
+  // Smooth scroll
+  document.querySelectorAll('.nav-links a[href^="#"], .btn-outline[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+      const targetId = this.getAttribute('href');
+      if (targetId === "#" || targetId.includes("index.html")) return;
+      if (targetId && targetId !== "#" && targetId.startsWith("#")) {
+        const targetElem = document.querySelector(targetId);
+        if(targetElem) { e.preventDefault(); targetElem.scrollIntoView({ behavior:'smooth', block:'start' }); }
+      }
+    });
+  });
+
+  function showToast(msg, bg="#2c4b2f") {
+    let old = document.querySelector('.alert-toast');
+    if(old) old.remove();
+    let toast = document.createElement('div');
+    toast.className = 'alert-toast';
+    toast.textContent = msg;
+    toast.style.backgroundColor = bg;
+    toast.style.maxWidth = "90%";
+    toast.style.textAlign = "center";
+    document.body.appendChild(toast);
+    setTimeout(() => { toast.style.opacity = "0"; setTimeout(()=>toast.remove(),400); },3800);
+  }
+
+  // GAME NHẬN DIỆN DẤU HIỆU (cảm nhận của bé)
+  const signCards = document.querySelectorAll('.sign-card');
+  let gameActive = true;
+
+  function resetGame() {
+    signCards.forEach(card => {
+      card.classList.remove('correct-sign', 'wrong-sign');
+      card.style.pointerEvents = 'auto';
+    });
+    gameActive = true;
+    document.getElementById('gameFeedback').innerHTML = '';
+    showToast("🔄 Đã làm lại! Hãy click vào những dấu hiệu NGUY HIỂM mà bé cảm thấy có thể là người xấu nhé.", "#E67E22");
+  }
+
+  function updateGame() {
+    const dangerCards = document.querySelectorAll('.sign-card[data-danger="true"]');
+    const totalDanger = dangerCards.length;
+    const correctlyClicked = document.querySelectorAll('.sign-card.correct-sign[data-danger="true"]').length;
+    if (correctlyClicked === totalDanger && totalDanger > 0) {
+      document.getElementById('gameFeedback').innerHTML = '🎉 Xuất sắc! Bé đã nhận ra hết các dấu hiệu của người xấu. Hãy luôn tin vào trực giác của mình và bảo vệ bản thân nhé! 🎉';
+      showToast("🎉 Chúc mừng! Bé đã nhận diện đúng tất cả dấu hiệu nguy hiểm!", "#2c4b2f");
+      gameActive = false;
+      signCards.forEach(card => { if(!card.classList.contains('correct-sign') && !card.classList.contains('wrong-sign')) card.style.pointerEvents = 'none'; });
+    }
+  }
+
+  signCards.forEach(card => {
+    card.addEventListener('click', () => {
+      if (!gameActive) return;
+      if (card.classList.contains('correct-sign') || card.classList.contains('wrong-sign')) return;
+      const isDanger = card.getAttribute('data-danger') === 'true';
+      if (isDanger) {
+        card.classList.add('correct-sign');
+        showToast("✅ Đúng rồi! Đây là dấu hiệu của người xấu. Bé rất tinh ý!", "#2c4b2f");
+      } else {
+        card.classList.add('wrong-sign');
+        showToast("⚠️ Tình huống này an toàn. Bé chỉ cần click vào những dấu hiệu khiến bé nghi ngờ người xấu thôi nhé!", "#D94A2B");
+      }
+      updateGame();
+    });
+  });
+
+  document.getElementById('resetSignGame').addEventListener('click', resetGame);
+
+  // MOBILE MENU (giống index)
+  (function initMobileMenu() {
+    function isMobile() { return window.innerWidth <= 768; }
+    if (!isMobile()) return;
+    if (document.querySelector('.hamburger-menu')) return;
+    const navWrapper = document.querySelector('.nav-wrapper');
+    const navLinks = document.querySelector('.nav-links');
+    if (!navWrapper || !navLinks) return;
+    const hamburger = document.createElement('button');
+    hamburger.className = 'hamburger-menu';
+    hamburger.innerHTML = '<i class="fas fa-bars"></i>';
+    hamburger.style.cssText = `background:none; border:none; font-size:1.8rem; color:#D94A2B; cursor:pointer; display:none; padding:8px; margin-left:auto; touch-action:manipulation;`;
+    navWrapper.insertBefore(hamburger, navLinks);
+    const style = document.createElement('style');
+    style.textContent = `@media (max-width:768px){.hamburger-menu{display:block!important}.nav-links{position:fixed;top:0;right:-100%;width:75%;max-width:280px;height:100vh;background:white;flex-direction:column;align-items:flex-start;padding:80px 24px 24px;gap:24px;transition:right 0.3s ease;box-shadow:-4px 0 20px rgba(0,0,0,0.1);z-index:1000;display:flex!important}.nav-links.show{right:0}body.menu-open{overflow:hidden}.menu-overlay{position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.4);z-index:999;opacity:0;visibility:hidden;transition:0.2s}.menu-overlay.active{opacity:1;visibility:visible}}`;
+    document.head.appendChild(style);
+    const overlay = document.createElement('div');
+    overlay.className = 'menu-overlay';
+    document.body.appendChild(overlay);
+    function openMenu() { navLinks.classList.add('show'); overlay.classList.add('active'); document.body.classList.add('menu-open'); }
+    function closeMenu() { navLinks.classList.remove('show'); overlay.classList.remove('active'); document.body.classList.remove('menu-open'); }
+    hamburger.addEventListener('click', (e) => { e.stopPropagation(); navLinks.classList.contains('show') ? closeMenu() : openMenu(); });
+    document.querySelectorAll('.nav-links a').forEach(link => link.addEventListener('click', closeMenu));
+    overlay.addEventListener('click', closeMenu);
+    window.addEventListener('resize', () => { if(window.innerWidth > 768 && navLinks.classList.contains('show')) closeMenu(); });
+  })();
+
+  // Thêm tel link cho mobile
+  if(window.innerWidth <= 768) {
+    const hot = document.querySelector('.hotline-mini');
+    if(hot) {
+      hot.innerHTML = hot.innerHTML.replace(/\b111\b/g, '<a href="tel:111" style="color:#ffb48a; text-decoration:underline;">111</a>');
+      hot.innerHTML = hot.innerHTML.replace(/\b113\b/g, '<a href="tel:113" style="color:#ffb48a; text-decoration:underline;">113</a>');
+      hot.innerHTML = hot.innerHTML.replace(/1800\s*1567/g, '<a href="tel:18001567" style="color:#ffb48a; text-decoration:underline;">1800 1567</a>');
+    }
+  }
+
+  window.addEventListener('load', () => { setTimeout(()=>{ showToast("🔍 Hãy cùng học cách nhận diện những dấu hiệu của người xấu để bảo vệ mình và bạn bè nhé!", "#D94A2B"); },800); });
+</script>
+</body>
+</html>
