@@ -2,12 +2,8 @@
 <html lang="vi">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, user-scalable=yes">
-  
-  <title>Bảo Vệ Trẻ Em | Phòng Chống Bắt Cóc & Xâm Hại Trẻ Em</title>
-  <meta name="description" content="Thông tin, hướng dẫn phòng chống xâm hại và bảo vệ trẻ em hiệu quả, an toàn cho gia đình và xã hội">
-  <meta name="keywords" content="phòng chống xâm hại, bảo vệ trẻ em, chống bắt cóc, an toàn trẻ em">
-  <meta name="robots" content="index, follow">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Chính sách bảo mật | Bảo Vệ Trẻ Em</title>
   <!-- Google Fonts & Font Awesome -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
@@ -22,18 +18,16 @@
       font-family: 'Inter', sans-serif;
       background-color: #fefcf5;
       color: #1e2a2e;
-      scroll-behavior: smooth;
       line-height: 1.5;
     }
 
-    /* Container */
     .container {
       max-width: 1280px;
       margin: 0 auto;
       padding: 0 24px;
     }
 
-    /* Navigation */
+    /* Navbar tương tự index */
     .navbar {
       background: white;
       box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
@@ -63,22 +57,17 @@
       font-size: 0.75rem;
       font-weight: 500;
       color: #E67E22;
-      letter-spacing: 0.5px;
     }
-    /* Desktop nav links */
     .nav-links {
       display: flex;
       gap: 32px;
       list-style: none;
-      transition: all 0.3s ease;
     }
     .nav-links a {
       text-decoration: none;
       font-weight: 600;
       color: #2c3e2f;
       transition: 0.2s;
-      font-size: 1rem;
-      white-space: nowrap;
     }
     .nav-links a:hover {
       color: #D94A2B;
@@ -93,220 +82,94 @@
       background: #D94A2B;
       color: white !important;
     }
-    /* Hamburger menu button (ẩn trên desktop) */
-    .menu-toggle {
-      display: none;
-      background: none;
-      border: none;
-      font-size: 1.8rem;
-      color: #D94A2B;
-      cursor: pointer;
-      transition: 0.2s;
-      padding: 8px;
-      border-radius: 50%;
-      width: 44px;
-      height: 44px;
-      align-items: center;
-      justify-content: center;
+
+    /* Hero nhỏ */
+    .page-hero {
+      background: linear-gradient(120deg, #fff2e8, #ffe1cf);
+      padding: 50px 0;
+      text-align: center;
     }
-    .menu-toggle:hover {
-      background-color: #fff0e6;
+    .page-hero h1 {
+      font-size: 2.5rem;
+      font-weight: 800;
+      color: #2d3e2b;
+      margin-bottom: 12px;
+    }
+    .page-hero p {
+      color: #5c4b3a;
+      max-width: 700px;
+      margin: 0 auto;
     }
 
-    /* Hero */
-    .hero {
-      background: linear-gradient(120deg, #fff7ed, #ffe6d5);
-      padding: 60px 0 70px;
+    /* Nội dung chính sách */
+    .policy-content {
+      padding: 60px 0 80px;
     }
-    .hero-grid {
-      display: flex;
-      align-items: center;
-      gap: 40px;
-      flex-wrap: wrap;
+    .policy-card {
+      background: white;
+      border-radius: 32px;
+      padding: 40px;
+      box-shadow: 0 12px 28px rgba(0, 0, 0, 0.04);
+      border: 1px solid #ffe1cf;
     }
-    .hero-content {
-      flex: 1.2;
+    .policy-card h2 {
+      font-size: 1.8rem;
+      font-weight: 700;
+      margin: 32px 0 16px 0;
+      color: #2c4b2f;
+      border-left: 6px solid #D94A2B;
+      padding-left: 20px;
     }
-    .hero-badge {
+    .policy-card h2:first-of-type {
+      margin-top: 0;
+    }
+    .policy-card h3 {
+      font-size: 1.3rem;
+      font-weight: 600;
+      margin: 24px 0 12px 0;
+      color: #b34127;
+    }
+    .policy-card p, .policy-card li {
+      color: #2e3f2c;
+      margin-bottom: 12px;
+      line-height: 1.6;
+    }
+    .policy-card ul, .policy-card ol {
+      margin-left: 28px;
+      margin-bottom: 20px;
+    }
+    .policy-card li {
+      margin-bottom: 8px;
+    }
+    .badge-date {
       background: #ffede3;
       display: inline-block;
-      padding: 6px 14px;
+      padding: 4px 16px;
       border-radius: 40px;
       font-size: 0.85rem;
       font-weight: 600;
       color: #c0392b;
       margin-bottom: 20px;
     }
-    .hero-content h1 {
-      font-size: 3.2rem;
-      font-weight: 800;
-      line-height: 1.2;
-      margin-bottom: 20px;
-      color: #2d3e2b;
-    }
-    .hero-content h1 span {
-      color: #D94A2B;
-    }
-    .hero-content p {
-      font-size: 1.2rem;
-      color: #3e5a3a;
-      margin-bottom: 30px;
-    }
-    .hero-stats {
-      display: flex;
-      gap: 32px;
-      margin-top: 20px;
-      flex-wrap: wrap;
-    }
-    .stat-item h3 {
-      font-size: 2rem;
-      font-weight: 800;
-      color: #D94A2B;
-    }
-    .hero-img {
-      flex: 0.8;
+    .back-home {
       text-align: center;
+      margin-top: 40px;
     }
-    .hero-img i {
-      font-size: 12rem;
-      color: #e67e22;
-      opacity: 0.8;
-    }
-
-    /* section general */
-    section {
-      padding: 70px 0;
-    }
-    .section-title {
-      text-align: center;
-      font-size: 2.2rem;
-      font-weight: 800;
-      margin-bottom: 16px;
-      color: #2c4b2f;
-    }
-    .section-sub {
-      text-align: center;
-      max-width: 700px;
-      margin: 0 auto 50px auto;
-      color: #5c6e5a;
-      font-size: 1.1rem;
-    }
-    .card-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 32px;
-    }
-    .card {
-      background: white;
-      border-radius: 28px;
-      padding: 30px 24px;
-      box-shadow: 0 12px 28px rgba(0, 0, 0, 0.04);
-      transition: transform 0.25s ease, box-shadow 0.3s;
-      border: 1px solid #ffe1cf;
-    }
-    .card:hover {
-      transform: translateY(-6px);
-      box-shadow: 0 24px 40px rgba(217, 74, 43, 0.08);
-    }
-    .card-icon {
-      font-size: 2.5rem;
-      color: #D94A2B;
-      margin-bottom: 20px;
-    }
-    .card h3 {
-      font-size: 1.5rem;
-      margin-bottom: 12px;
-      font-weight: 700;
-    }
-    .card p, .card li {
-      color: #2e3f2c;
-    }
-    .warning-list {
-      padding-left: 20px;
-    }
-    .warning-list li {
-      margin-bottom: 12px;
-    }
-    .two-columns {
-      display: flex;
-      gap: 40px;
-      flex-wrap: wrap;
-    }
-    .col {
-      flex: 1;
-      background: white;
-      border-radius: 28px;
-      padding: 28px;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.02);
-      border: 1px solid #ffddd0;
-    }
-    .col h3 i {
-      color: #e67e22;
-      margin-right: 10px;
-    }
-    .hotline {
-      background: #2e3f2c;
-      color: white;
-      border-radius: 32px;
-      text-align: center;
-    }
-    .hotline-number {
-      font-size: 2.2rem;
-      font-weight: 800;
-      letter-spacing: 2px;
-      background: #ffedd5;
-      display: inline-block;
-      padding: 10px 28px;
-      border-radius: 60px;
-      color: #b34127;
-      margin: 20px 0;
-    }
-    .report-form {
-      background: white;
-      border-radius: 28px;
-      padding: 36px;
-      margin-top: 20px;
-      box-shadow: 0 12px 28px rgba(0,0,0,0.05);
-    }
-    .form-group {
-      margin-bottom: 20px;
-    }
-    input, textarea, select {
-      width: 100%;
-      padding: 14px 18px;
-      border-radius: 48px;
-      border: 1.5px solid #ffd9c8;
-      font-family: 'Inter', sans-serif;
-      transition: 0.2s;
-      background: #fffbf5;
-      font-size: 16px; /* tránh zoom trên iOS */
-    }
-    textarea {
-      border-radius: 28px;
-      resize: vertical;
-    }
-    input:focus, textarea:focus {
-      outline: none;
-      border-color: #D94A2B;
-      box-shadow: 0 0 0 3px rgba(217,74,43,0.2);
-    }
-    .btn-primary {
+    .back-home a {
       background: #D94A2B;
-      border: none;
       color: white;
-      font-weight: 700;
-      padding: 14px 28px;
+      text-decoration: none;
+      padding: 12px 32px;
       border-radius: 60px;
-      font-size: 1rem;
-      cursor: pointer;
+      font-weight: 700;
+      display: inline-block;
       transition: 0.2s;
-      width: 100%;
-      font-family: 'Inter', sans-serif;
     }
-    .btn-primary:hover {
+    .back-home a:hover {
       background: #b93c21;
       transform: scale(0.98);
     }
+
     .footer {
       background: #1e2a24;
       color: #ddd8cf;
@@ -325,347 +188,107 @@
     .social-icons i:hover {
       color: #e67e22;
     }
-    .alert-toast {
-      position: fixed;
-      bottom: 30px;
-      left: 50%;
-      transform: translateX(-50%);
-      background: #2c4b2f;
-      color: white;
-      padding: 12px 28px;
-      border-radius: 60px;
-      font-weight: 600;
-      z-index: 200;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
-      animation: fadeUp 0.3s ease;
-      max-width: 90%;
-      text-align: center;
-      font-size: 0.95rem;
-    }
-    @keyframes fadeUp {
-      from { opacity: 0; transform: translateX(-50%) translateY(20px); }
-      to { opacity: 1; transform: translateX(-50%) translateY(0); }
-    }
-    hr {
-      margin: 20px 0;
-      border-color: #ffe0cf;
-    }
-
-    /* ========== RESPONSIVE & MOBILE OPTIMIZATIONS ========== */
-    @media (max-width: 860px) {
-      .hero-content h1 { font-size: 2.5rem; }
-      .hero-img i { font-size: 8rem; }
-      .nav-wrapper { flex-direction: row; justify-content: space-between; }
-    }
-
-    /* Mobile styles (tablet & phone) */
-    @media (max-width: 768px) {
-      .container {
-        padding: 0 20px;
-      }
-      section {
-        padding: 50px 0;
-      }
-      .section-title {
-        font-size: 1.9rem;
-      }
-      .section-sub {
-        font-size: 1rem;
-        margin-bottom: 36px;
-      }
-      /* Ẩn nav-links mặc định, hiển thị dạng cột khi active */
-      .nav-links {
-        display: none;
-        flex-direction: column;
-        width: 100%;
-        background: white;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        padding: 20px 24px;
-        gap: 20px;
-        box-shadow: 0 20px 30px rgba(0,0,0,0.08);
-        border-radius: 0 0 28px 28px;
-        z-index: 99;
-        backdrop-filter: blur(12px);
-        background: rgba(255, 255, 255, 0.98);
-      }
-      .nav-links.active {
-        display: flex;
-      }
-      .nav-links li {
-        width: 100%;
-        text-align: center;
-      }
-      .nav-links a {
-        display: inline-block;
-        padding: 12px 0;
-        font-size: 1.2rem;
-        white-space: normal;
-      }
-      .btn-outline {
-        border: 1.5px solid #D94A2B;
-        padding: 8px 24px;
-        display: inline-block;
-        width: auto;
-      }
-      .menu-toggle {
-        display: flex; /* hiển thị nút hamburger trên mobile */
-      }
-      .hero-grid {
-        flex-direction: column;
-        text-align: center;
-      }
-      .hero-content {
-        text-align: center;
-      }
-      .hero-stats {
-        justify-content: center;
-      }
-      .hero-img i {
-        font-size: 6rem;
-      }
-      .card-grid {
-        grid-template-columns: 1fr;
-        gap: 24px;
-      }
-      .two-columns {
-        flex-direction: column;
-        gap: 24px;
-      }
-      .col {
-        padding: 24px;
-      }
-      .hotline-number {
-        font-size: 1.8rem;
-        padding: 8px 20px;
-      }
-      .report-form {
-        padding: 24px;
-      }
-      input, textarea, select, .btn-primary {
-        font-size: 16px; /* tránh zoom tự động */
-        padding: 14px 18px;
-      }
-      .btn-primary {
-        padding: 14px;
-      }
-      .footer .social-icons i {
-        font-size: 1.8rem;
-        margin: 0 12px;
-      }
-    }
-
-    /* extra small devices (dưới 480px) */
-    @media (max-width: 480px) {
-      .hero-content h1 {
-        font-size: 1.9rem;
-      }
-      .section-title {
-        font-size: 1.7rem;
-      }
-      .logo h1 {
-        font-size: 1.3rem;
-      }
-      .logo p {
-        font-size: 0.65rem;
-      }
-      .stat-item h3 {
-        font-size: 1.6rem;
-      }
-      .stat-item span {
-        font-size: 0.8rem;
-      }
-      .card h3 {
-        font-size: 1.3rem;
-      }
-      .hero-badge {
-        font-size: 0.75rem;
-      }
-      .hotline-number {
-        font-size: 1.5rem;
-      }
-      .alert-toast {
-        font-size: 0.85rem;
-        padding: 10px 20px;
-        bottom: 20px;
-      }
-    }
-
-    /* Cải thiện touch target cho các nút và liên kết */
-    button, a, .nav-links a, .btn-primary, .menu-toggle {
-      touch-action: manipulation;
-    }
-    /* Đảm bảo form không bị tràn */
-    input, textarea, select {
-      -webkit-appearance: none;
-      appearance: none;
+    @media (max-width: 760px) {
+      .nav-wrapper { flex-direction: column; gap: 12px; }
+      .nav-links { gap: 20px; flex-wrap: wrap; justify-content: center; }
+      .policy-card { padding: 24px; }
+      .page-hero h1 { font-size: 1.9rem; }
     }
   </style>
 </head>
 <body>
 
-<!-- NAVIGATION -->
+<!-- NAVIGATION (giống index để đồng bộ) -->
 <div class="navbar">
   <div class="container nav-wrapper">
     <div class="logo">
       <h1>🌱 AN TOÀN CHO BÉ</h1>
-      <p>Chung tay chống bắt cóc & xâm hại trẻ em</p>
+      <p>Chung tay chống bắt cóc & buôn bán trẻ em</p>
     </div>
-    <!-- Hamburger button cho mobile -->
-    <button class="menu-toggle" id="mobileMenuToggle" aria-label="Menu điều hướng">
-      <i class="fas fa-bars"></i>
-    </button>
-    <ul class="nav-links" id="navLinks">
-      <li><a href="#home">Trang chủ</a></li>
-      <li><a href="phongtranh.html#prevention">Phòng tránh</a></li>
+    <ul class="nav-links">
+      <li><a href="index.html#home">Trang chủ</a></li>
+      <li><a href="phongtranh#prevention">Phòng tránh</a></li>
       <li><a href="dauhieu.html#signs">Dấu hiệu</a></li>
       <li><a href="loikhuyen.html#advice">Lời khuyên</a></li>
-      <li><a href="#report" class="btn-outline">Báo tin khẩn</a></li>
+      <li><a href="index.html#report" class="btn-outline">Báo tin khẩn</a></li>
     </ul>
   </div>
 </div>
 
-<!-- HERO SECTION -->
-<section id="home" class="hero">
-  <div class="container hero-grid">
-    <div class="hero-content">
-      <div class="hero-badge"><i class="fas fa-shield-alt"></i> BẢO VỆ TƯƠNG LAI</div>
-      <h1>Ngăn chặn bắt cóc, <span>xâm hại trẻ em</span> – Trách nhiệm của mỗi chúng ta</h1>
-      <p>Trang bị kiến thức, kỹ năng phòng vệ và tố giác hành vi xâm hại. Hãy cùng hành động để giữ an toàn cho con em mình.</p>
-      <div class="hero-stats">
-        <div class="stat-item"><h3>+2.000</h3><span>trẻ được giải cứu năm 2023</span></div>
-        <div class="stat-item"><h3>111</h3><span>Đường dây nóng</span></div>
-      </div>
-    </div>
-    <div class="hero-img">
-      <i class="fas fa-hands-helping"></i>
-    </div>
+<!-- HERO nhỏ -->
+<section class="page-hero">
+  <div class="container">
+    <div class="badge-date">Cập nhật: 01/04/2026</div>
+    <h1>Chính sách bảo mật</h1>
+    <p>Chúng tôi cam kết bảo vệ thông tin cá nhân của bạn khi sử dụng trang web vì sự an toàn của trẻ em.</p>
   </div>
 </section>
 
-<!-- CÁC BIỆN PHÁP PHÒNG TRÁNH -->
-<section id="prevention">
+<!-- Nội dung chính sách -->
+<section class="policy-content">
   <div class="container">
-    <div class="section-title">🛡️ Biện pháp phòng ngừa</div>
-    <div class="section-sub">Những thói quen an toàn giúp bảo vệ trẻ khỏi nguy cơ bị bắt cóc, xâm hại và buôn bán.</div>
-    <div class="card-grid">
-      <div class="card">
-        <div class="card-icon"><i class="fas fa-child"></i></div>
-        <h3>Dạy trẻ kỹ năng “5 KHÔNG”</h3>
-        <p>Không đi theo người lạ, không nhận quà từ người không quen, không tiết lộ thông tin cá nhân, không lên xe người lạ, không giữ bí mật khi bị đe dọa.</p>
-      </div>
-      <div class="card">
-        <div class="card-icon"><i class="fas fa-map-marker-alt"></i></div>
-        <h3>Giám sát & nhận diện môi trường</h3>
-        <p>Luôn biết con bạn ở đâu, ai đang trông giữ. Hạn chế để trẻ một mình ở nơi vắng vẻ, khu vực không camera an ninh.</p>
-      </div>
-      <div class="card">
-        <div class="card-icon"><i class="fas fa-mobile-alt"></i></div>
-        <h3>Sử dụng công nghệ hỗ trợ</h3>
-        <p>Cài đặt ứng dụng định vị, đồng hồ thông minh. Thiết lập mật khẩu và kiểm soát bạn bè trực tuyến, tránh bị lừa gạt qua mạng.</p>
-      </div>
-      <div class="card">
-        <div class="card-icon"><i class="fas fa-hand-holding-heart"></i></div>
-        <h3>Gắn kết gia đình</h3>
-        <p>Trò chuyện hàng ngày, lắng nghe trẻ chia sẻ. Xây dựng mối quan hệ tin tưởng để trẻ không ngại nói khi gặp nguy hiểm.</p>
-      </div>
-    </div>
-  </div>
-</section>
+    <div class="policy-card">
+      <h2>1. Cam kết bảo mật</h2>
+      <p>Trang web <strong>“An toàn cho bé”</strong> hoạt động với mục đích nâng cao nhận thức và hỗ trợ phòng chống bắt cóc, buôn bán trẻ em. Chúng tôi hiểu rằng thông tin bạn cung cấp (qua biểu mẫu báo tin, liên hệ) là rất nhạy cảm. Vì vậy, chúng tôi cam kết:</p>
+      <ul>
+        <li>Chỉ thu thập thông tin cần thiết để hỗ trợ xử lý tin báo và cải thiện dịch vụ.</li>
+        <li>Không chia sẻ, bán hoặc tiết lộ thông tin cá nhân cho bên thứ ba trừ khi được yêu cầu bởi cơ quan pháp luật có thẩm quyền hoặc để bảo vệ an toàn của trẻ em.</li>
+        <li>Áp dụng các biện pháp kỹ thuật và tổ chức nhằm bảo vệ dữ liệu khỏi truy cập trái phép, mất mát hoặc tiết lộ.</li>
+      </ul>
 
-<!-- DẤU HIỆU NHẬN BIẾT -->
-<section id="signs" style="background: #fff8f2;">
-  <div class="container">
-    <div class="section-title">⚠️ Dấu hiệu nhận biết trẻ có nguy cơ bị bắt cóc / xâm hại</div>
-    <div class="section-sub">Cha mẹ, thầy cô và cộng đồng cần cảnh giác trước những biểu hiện bất thường.</div>
-    <div class="two-columns">
-      <div class="col">
-        <h3><i class="fas fa-frown-open"></i> Thay đổi hành vi & tâm lý</h3>
-        <ul class="warning-list">
-          <li>✔ Trẻ đột nhiên sợ hãi, lo lắng, trầm cảm hoặc hung hăng bất thường.</li>
-          <li>✔ Bỏ học, trốn nhà, có bạn bè xấu hoặc người lớn lạ mặt quan tâm đặc biệt.</li>
-          <li>✔ Có vết bầm tím, trầy xước không rõ nguyên nhân, thay đổi giờ giấc sinh hoạt.</li>
-        </ul>
-      </div>
-      <div class="col">
-        <h3><i class="fas fa-eye"></i> Dấu hiệu từ môi trường xung quanh</h3>
-        <ul class="warning-list">
-          <li>✔ Trẻ thường xuyên đi cùng người không phải cha mẹ nhưng tỏ ra sợ hãi hoặc bị kiểm soát.</li>
-          <li>✔ Xuất hiện vật dụng lạ, tiền bạc, điện thoại đắt tiền không phù hợp lứa tuổi.</li>
-          <li>✔ Trẻ biến mất trong khoảng thời gian dài mà không có lời giải thích hợp lý.</li>
-        </ul>
-      </div>
-    </div>
-    <div class="card" style="margin-top: 32px; background:#fceedb;">
-      <div class="card-icon"><i class="fas fa-bell"></i></div>
-      <h3>Hành động khi nghi ngờ</h3>
-      <p>Hãy báo ngay cho cơ quan công an gần nhất hoặc gọi <strong>Tổng đài Quốc gia Bảo vệ Trẻ em 111</strong>. Không để sự việc trôi qua vì có thể cứu một mạng người!</p>
-    </div>
-  </div>
-</section>
+      <h2>2. Thông tin chúng tôi thu thập</h2>
+      <p>Khi sử dụng trang web, bạn có thể tự nguyện cung cấp các loại thông tin sau:</p>
+      <ul>
+        <li><strong>Thông tin qua biểu mẫu báo tin khẩn:</strong> Họ tên (có thể ẩn danh), số điện thoại (để liên hệ xác minh), địa điểm, mô tả vụ việc. Những thông tin này được gửi trực tiếp đến hệ thống hỗ trợ (mô phỏng) và chúng tôi khuyến khích người dùng gọi hotline 111 trong trường hợp khẩn cấp.</li>
+        <li><strong>Dữ liệu truy cập tự động:</strong> Như địa chỉ IP, loại trình duyệt, trang giới thiệu, thời gian truy cập. Dữ liệu này được sử dụng để phân tích xu hướng và vận hành trang web, không định danh cá nhân cụ thể.</li>
+        <li><strong>Cookie:</strong> Trang web có thể sử dụng cookie để ghi nhớ tùy chọn hiển thị hoặc phân tích lượt truy cập. Bạn có thể tắt cookie trong cài đặt trình duyệt, tuy nhiên một số tính năng có thể bị ảnh hưởng.</li>
+      </ul>
 
-<!-- LỜI KHUYÊN CHO TRẺ & PHỤ HUYNH -->
-<section id="advice">
-  <div class="container">
-    <div class="section-title">🧸 Lời khuyên hữu ích</div>
-    <div class="section-sub">Dành cho trẻ em và người chăm sóc – Cùng xây dựng lá chắn an toàn</div>
-    <div class="two-columns">
-      <div class="col">
-        <h3><i class="fas fa-smile-wink"></i> Dành cho TRẺ EM</h3>
-        <ul class="warning-list">
-          <li>🔹 Luôn đi cùng bạn bè hoặc người lớn tin cậy, không đi qua hẻm tối một mình.</li>
-          <li>🔹 Ghi nhớ số điện thoại bố mẹ, tên trường, địa chỉ nhà.</li>
-          <li>🔹 Hét thật to “CỨU TÔI! ĐÂY KHÔNG PHẢI BỐ MẸ TÔI!” nếu bị ép buộc.</li>
-          <li>🔹 Tin vào trực giác – nếu cảm thấy không an toàn, hãy chạy đến nơi đông người.</li>
-        </ul>
-      </div>
-      <div class="col">
-        <h3><i class="fas fa-user-friends"></i> Dành cho PHỤ HUYNH & NGƯỜI GIÁM HỘ</h3>
-        <ul class="warning-list">
-          <li>🔸 Dạy con kỹ năng từ chối, phân biệt người lạ "có ý đồ tốt/xấu".</li>
-          <li>🔸 Thường xuyên kiểm tra các mối quan hệ của con trên mạng xã hội.</li>
-          <li>🔸 Đưa đón con đúng giờ, đặc biệt khi trẻ học thêm hoặc tham gia hoạt động ngoại khóa.</li>
-          <li>🔸 Xây dựng mật khẩu an toàn trong gia đình để nhận diện người thân khi khẩn cấp.</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</section>
+      <h2>3. Mục đích sử dụng thông tin</h2>
+      <p>Thông tin của bạn được sử dụng cho các mục đích chính đáng:</p>
+      <ul>
+        <li>Hỗ trợ chuyển tiếp tin báo đến cơ quan chức năng (Công an, Tổng đài 111) để can thiệp kịp thời.</li>
+        <li>Cải thiện nội dung, giao diện và trải nghiệm người dùng của trang web.</li>
+        <li>Liên hệ lại với bạn (nếu bạn cung cấp số điện thoại) để xác minh thêm thông tin phục vụ công tác bảo vệ trẻ em.</li>
+        <li>Thống kê ẩn danh nhằm đánh giá hiệu quả chiến dịch truyền thông.</li>
+      </ul>
 
-<!-- HOTLINE + FORM BÁO CÁO KHẨN CẤP -->
-<section id="report" style="background: #f7ede4;">
-  <div class="container">
-    <div class="section-title">📞 TỐ GIÁC & HỖ TRỢ KHẨN CẤP</div>
-    <div class="section-sub">Hãy là tiếng nói bảo vệ trẻ em. Nếu bạn phát hiện hành vi bắt cóc, buôn bán hoặc xâm hại trẻ, hãy liên hệ ngay.</div>
-    
-    <div class="hotline" style="padding: 32px 24px;">
-      <i class="fas fa-phone-alt" style="font-size: 2.2rem;"></i>
-      <h2 style="margin-top: 8px;">Đường dây nóng quốc gia</h2>
-      <div class="hotline-number">111</div>
-      <p>Hoặc gọi Công an: 113 · Tổng đài bảo vệ trẻ em: 1800 1567</p>
-      <p style="font-size:0.9rem; margin-top:10px;">☎️ Luôn trực tuyến 24/7, miễn phí, bảo mật tuyệt đối</p>
-    </div>
+      <h2>4. Chia sẻ thông tin với bên thứ ba</h2>
+      <p>Chúng tôi <strong>không bán, trao đổi hoặc chuyển giao</strong> thông tin cá nhân của bạn cho các tổ chức, cá nhân khác ngoại trừ:</p>
+      <ul>
+        <li>Khi có yêu cầu hợp pháp từ cơ quan nhà nước có thẩm quyền (Công an, Viện kiểm sát, Tòa án).</li>
+        <li>Để bảo vệ tính mạng, sức khỏe hoặc tài sản của trẻ em hoặc cộng đồng.</li>
+        <li>Khi được sự đồng ý rõ ràng từ bạn.</li>
+      </ul>
+      <p>Các đơn vị cung cấp dịch vụ lưu trữ, bảo trì kỹ thuật có thể truy cập dữ liệu trong phạm vi nhiệm vụ và cam kết bảo mật tương tự.</p>
 
-    <div class="report-form">
-      <h3 style="font-size: 1.8rem; margin-bottom: 20px; text-align: center;"><i class="fas fa-envelope-open-text"></i> Gửi tin báo khẩn (hỗ trợ cộng đồng)</h3>
-      <p style="text-align: center; margin-bottom: 24px;">Thông tin của bạn được bảo mật, chỉ dùng để chuyển đến cơ quan chức năng. Hãy mô tả chi tiết sự việc.</p>
-      <form id="emergencyForm">
-        <div class="form-group">
-          <input type="text" placeholder="Họ và tên (hoặc ẩn danh)" id="nameReport">
-        </div>
-        <div class="form-group">
-          <input type="tel" placeholder="Số điện thoại (để liên hệ xác minh)" id="phoneReport">
-        </div>
-        <div class="form-group">
-          <input type="text" placeholder="Địa điểm xảy ra / nghi vấn" id="locationReport">
-        </div>
-        <div class="form-group">
-          <textarea rows="4" placeholder="Mô tả chi tiết vụ việc, dấu hiệu, nhân vật liên quan... (càng rõ ràng càng tốt)" id="descReport"></textarea>
-        </div>
-        <button type="submit" class="btn-primary"><i class="fas fa-paper-plane"></i> Gửi tin báo khẩn cấp</button>
-        <p style="font-size: 0.75rem; text-align: center; margin-top: 16px;">* Trường hợp khẩn cấp cần can thiệp ngay, hãy gọi 111 hoặc 113.</p>
-      </form>
+      <h2>5. Quyền của bạn</h2>
+      <p>Bạn có quyền:</p>
+      <ul>
+        <li>Yêu cầu chúng tôi cung cấp bản sao thông tin cá nhân mà chúng tôi đang lưu giữ (nếu có).</li>
+        <li>Yêu cầu chỉnh sửa, cập nhật hoặc xóa thông tin không chính xác.</li>
+        <li>Rút lại sự đồng ý đối với việc xử lý dữ liệu bất cứ lúc nào.</li>
+        <li>Khiếu nại đến cơ quan bảo vệ dữ liệu có thẩm quyền nếu bạn cho rằng quyền lợi bị xâm phạm.</li>
+      </ul>
+      <p>Để thực hiện các quyền này, vui lòng liên hệ qua email: <strong>baomat@antoancho.be</strong> hoặc sử dụng biểu mẫu liên hệ (sẽ được cập nhật).</p>
+
+      <h2>6. Bảo mật dữ liệu trẻ em</h2>
+      <p>Chúng tôi đặc biệt coi trọng việc bảo vệ thông tin của trẻ em. Trang web không cố ý thu thập thông tin cá nhân từ trẻ em dưới 13 tuổi mà không có sự đồng ý của cha mẹ hoặc người giám hộ. Nếu phát hiện đã thu thập nhầm, chúng tôi sẽ xóa ngay lập tức. Khi gửi báo cáo liên quan đến trẻ em, người dùng được khuyến cáo không cung cấp thông tin nhạy cảm không cần thiết (ví dụ: ảnh riêng tư) nếu chưa có biện pháp bảo mật phù hợp.</p>
+
+      <h2>7. Thời gian lưu trữ dữ liệu</h2>
+      <p>Thông tin báo tin khẩn cấp được lưu trữ tối đa 12 tháng để phục vụ công tác đối chiếu, sau đó sẽ được ẩn danh hoặc xóa định kỳ. Dữ liệu nhật ký truy cập được lưu không quá 6 tháng.</p>
+
+      <h2>8. Liên kết đến trang web khác</h2>
+      <p>Trang web có thể chứa liên kết đến các trang của đối tác (ví dụ: hotline 111, Bộ Công an...). Chúng tôi không chịu trách nhiệm về nội dung hoặc chính sách bảo mật của các trang đó. Bạn nên đọc kỹ chính sách bảo mật của từng trang.</p>
+
+      <h2>9. Thay đổi chính sách</h2>
+      <p>Chúng tôi có thể cập nhật chính sách bảo mật này theo thời gian để phù hợp với quy định pháp luật hoặc cải tiến dịch vụ. Mọi thay đổi sẽ được đăng tải tại đây kèm ngày hiệu lực. Việc tiếp tục sử dụng trang web sau khi thay đổi đồng nghĩa với việc bạn chấp nhận chính sách mới.</p>
+
+      <p><em>Ngày hiệu lực: 01/04/2026</em></p>
+
+      <div class="back-home">
+        <a href="index.html"><i class="fas fa-arrow-left"></i> Quay lại trang chủ</a>
+      </div>
     </div>
   </div>
 </section>
@@ -674,166 +297,22 @@
 <footer class="footer">
   <div class="container">
     <div class="social-icons">
-      <a href="https://web.facebook.com/p/H%E1%BB%99i-B%E1%BA%A3o-v%E1%BB%87-quy%E1%BB%81n-tr%E1%BA%BB-em-Vi%E1%BB%87t-Nam-100064695673480/?_rdc=1&_rdr#" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-f"></i></a>
-      <a href="https://www.youtube.com/@truyenhinhvitreem" target="_blank" rel="noopener noreferrer"><i class="fab fa-youtube"></i></a>
-      <a href="https://www.instagram.com/unicef_vietnam/" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
+      <i class="fab fa-facebook"></i>
+      <i class="fab fa-youtube"></i>
+      <i class="fab fa-tiktok"></i>
       <i class="fab fa-zalo"></i>
     </div>
-    <p style="margin: 20px 0 10px;">© 2025 - Chiến dịch "Chung tay bảo vệ trẻ em" | Phòng chống bắt cóc & xâm hại trẻ em</p>
+    <p style="margin: 20px 0 10px;">© 2026 - Chiến dịch "Chung tay bảo vệ trẻ em" | Phòng chống bắt cóc & buôn bán trẻ em</p>
     <p>Mọi hành vi xâm hại trẻ em cần được tố giác kịp thời. Hãy là người hùng thầm lặng.</p>
     <p><a href="chinhsach.html">Chính sách bảo mật</a> | <a href="lienhe.html">Liên hệ hợp tác</a></p>
   </div>
 </footer>
 
-<!-- Tổng hợp JS: Smooth scroll, Form xử lý, Active scroll + MOBILE MENU -->
+<!-- Script nhẹ để active menu, giữ đồng bộ với index (không bắt buộc) -->
 <script>
-  // --- SMOOTH SCROLL (giữ nguyên từ cũ, cải tiến thêm xử lý cho mobile menu đóng khi click) ---
-  document.querySelectorAll('.nav-links a[href^="#"], .btn-outline[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function(e) {
-      const targetId = this.getAttribute('href');
-      if(targetId === "#") return;
-      if(targetId && targetId !== "#") {
-        const targetElem = document.querySelector(targetId);
-        if(targetElem) {
-          e.preventDefault();
-          targetElem.scrollIntoView({ behavior: 'smooth', block: 'start' });
-          // Nếu menu mobile đang mở -> đóng lại
-          const navLinks = document.getElementById('navLinks');
-          if(navLinks && navLinks.classList.contains('active')) {
-            navLinks.classList.remove('active');
-            const toggleIcon = document.querySelector('#mobileMenuToggle i');
-            if(toggleIcon) toggleIcon.className = 'fas fa-bars';
-          }
-        }
-      }
-    });
-  });
-
-  // --- XỬ LÝ FORM BÁO TIN (giữ nguyên chức năng, chỉ bổ sung toast) ---
-  const form = document.getElementById('emergencyForm');
-  if(form) {
-    form.addEventListener('submit', function(e) {
-      e.preventDefault();
-      const name = document.getElementById('nameReport').value.trim() || "bạn đọc";
-      const phone = document.getElementById('phoneReport').value.trim();
-      const location = document.getElementById('locationReport').value.trim();
-      const description = document.getElementById('descReport').value.trim();
-      
-      if(!location && !description) {
-        showToast("⚠️ Vui lòng nhập ít nhất địa điểm hoặc mô tả chi tiết để cơ quan chức năng hỗ trợ!", "#b34127");
-        return;
-      }
-      
-      // giả lập gửi thành công
-      showToast(`✅ Cảm ơn ${name}! Tin báo của bạn đã được ghi nhận và chuyển đến tổng đài 111. Hãy theo dõi và giữ liên lạc.`, "#2c4b2f");
-      form.reset();
-    });
-  }
-
-  function showToast(message, bgColor = "#2c4b2f") {
-    const existingToast = document.querySelector('.alert-toast');
-    if(existingToast) existingToast.remove();
-    
-    const toast = document.createElement('div');
-    toast.className = 'alert-toast';
-    toast.textContent = message;
-    toast.style.backgroundColor = bgColor;
-    toast.style.color = "white";
-    toast.style.fontWeight = "500";
-    toast.style.maxWidth = "90%";
-    toast.style.textAlign = "center";
-    document.body.appendChild(toast);
-    
-    setTimeout(() => {
-      toast.style.opacity = "0";
-      setTimeout(() => toast.remove(), 400);
-    }, 4000);
-  }
-  
-  // Hiển thị thông báo nhắc nhở sau khi load (dành cho mobile cũng hữu ích)
-  window.addEventListener('load', () => {
-    console.log("Trang web vì sự an toàn của trẻ em - Phiên bản tối ưu mobile");
-    setTimeout(() => {
-      showToast("📢 Nếu phát hiện trẻ có nguy cơ bị bắt cóc, hãy gọi 111 ngay lập tức!", "#D94A2B");
-    }, 1000);
-  });
-  
-  // --- ACTIVE SCROLL HIGHLIGHT (giữ nguyên, cải thiện nhẹ) ---
-  const sections = document.querySelectorAll("section[id]");
-  const navLinks = document.querySelectorAll(".nav-links a");
-  window.addEventListener("scroll", () => {
-    let current = "";
-    const scrollPos = window.scrollY + 120;
-    sections.forEach(section => {
-      const sectionTop = section.offsetTop;
-      const sectionHeight = section.clientHeight;
-      if(scrollPos >= sectionTop && scrollPos < sectionTop + sectionHeight) {
-        current = section.getAttribute("id");
-      }
-    });
-    navLinks.forEach(link => {
-      const href = link.getAttribute("href").substring(1);
-      if(href === current && current !== "") {
-        link.style.color = "#D94A2B";
-        link.style.fontWeight = "800";
-      } else {
-        link.style.color = "";
-        link.style.fontWeight = "600";
-      }
-    });
-  });
-
-  // ========== MOBILE MENU TOGGLE (DÀNH CHO ĐIỆN THOẠI) ==========
-  const menuToggle = document.getElementById('mobileMenuToggle');
-  const navLinksMobile = document.getElementById('navLinks');
-  
-  if(menuToggle && navLinksMobile) {
-    // Đóng mở menu khi click nút hamburger
-    menuToggle.addEventListener('click', (e) => {
-      e.stopPropagation();
-      navLinksMobile.classList.toggle('active');
-      const icon = menuToggle.querySelector('i');
-      if(navLinksMobile.classList.contains('active')) {
-        icon.className = 'fas fa-times'; // chuyển thành icon đóng
-      } else {
-        icon.className = 'fas fa-bars';
-      }
-    });
-    
-    // Đóng menu nếu click ra ngoài (trên mobile, khi menu đang mở)
-    document.addEventListener('click', function(event) {
-      const isClickInsideNav = navLinksMobile.contains(event.target);
-      const isClickOnToggle = menuToggle.contains(event.target);
-      if (!isClickInsideNav && !isClickOnToggle && navLinksMobile.classList.contains('active')) {
-        navLinksMobile.classList.remove('active');
-        const icon = menuToggle.querySelector('i');
-        if(icon) icon.className = 'fas fa-bars';
-      }
-    });
-    
-    // Đóng menu khi thay đổi kích thước màn hình từ mobile lên desktop (tránh lỗi hiển thị)
-    window.addEventListener('resize', function() {
-      if(window.innerWidth > 768 && navLinksMobile.classList.contains('active')) {
-        navLinksMobile.classList.remove('active');
-        const icon = menuToggle.querySelector('i');
-        if(icon) icon.className = 'fas fa-bars';
-      }
-      // Đảm bảo nếu desktop thì menu luôn hiển thị block? Không, desktop dùng flex, không cần active class
-      if(window.innerWidth > 768) {
-        navLinksMobile.style.display = ''; // reset về style mặc định (css desktop sẽ xử lý display:flex)
-      } else {
-        // Đảm bảo display do css media quyết định, không can thiệp inline
-        if(!navLinksMobile.classList.contains('active')) {
-          navLinksMobile.style.display = '';
-        }
-      }
-    });
-    
-    // Xử lý initial: đảm bảo trên desktop không bị ẩn do style inline
-    if(window.innerWidth > 768) {
-      navLinksMobile.style.display = '';
-    }
-  }
+  // Gạch chân active cho link "Chính sách bảo mật" trong footer không cần xử lý phức tạp.
+  // Chỉ đảm bảo các liên kết về index hoạt động mượt.
+  console.log("Trang chính sách bảo mật - Bảo vệ thông tin người dùng");
 </script>
 </body>
 </html>
